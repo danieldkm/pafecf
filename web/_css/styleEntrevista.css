@@ -18,41 +18,51 @@ body{
 }
 
 /*Partes da tela*/
-    .reponsavelPaf{
-        border: thin solid black;
-    }
-    .main{
-        border: thin solid blue;
-    }
-    .top{
-        width:290px;
-        margin: 0 auto;
-        border: thin solid yellow;
-    }  
-    .middle{
-        margin-top: 40px;
-        border: thin solid red;
-    }
-    .bottom{ 
-        text-align: center;
-        font: 20px arial;
-        margin-top: 40px;
-        border: thin solid aqua;
-    }
-    .direita{
-        border:thin solid chartreuse;
-    }
-    .esquerda{
-        margin-left: 20px;
-        border: thin solid darkviolet;
-        width: 650px;
-    }
+.reponsavelPaf{
+    border: thin solid black;
+}
+.main{
+    border: thin solid blue;
+}
+.top{
+    width:290px;
+    margin: 0 auto;
+    border: thin solid yellow;
+}  
+.middle{
+    margin-top: 40px;
+    border: thin solid red;
+}
+.bottom{ 
+    text-align: center;
+    font: 20px arial;
+    margin-top: 40px;
+    border: thin solid aqua;
+}
+.direita{
+    border:thin solid chartreuse;
+    margin-rightt: 20px;
+    width: 650px;
+}
+.esquerda{
+    margin-left: 20px;
+    border: thin solid darkviolet;
+    width: 650px;
+}
 
 /*Todas as entradas estao centralizadas*/ 
-.txt{
+.txtE{
     width:150px;
     text-align: center;
     font: 20px  Arial;
+    margin-left: 500px;
+}
+.txtD{
+    width:150px;
+    text-align: center;
+    font: 20px  Arial;
+    margin-left: 500px;
+
 }
 .txtTop{
     width:290px;
@@ -63,23 +73,17 @@ body{
     margin-left: 20px;
     width: 70px;
     height: 30px;  
+    margin-top: 5px;       
+    margin-bottom: 10px;
 }
-.boxPerfilw{
-    margin-left: 14px;
-    width: 70px;
-    height: 30px; 
-}
-
 /* div labels'*/
 .labelsE{
+    padding-top: 10px;
 }
 .labelsD{
 }
 .labelP{    
-    margin-right: 10px;
-}
-.labelPW{    
-    margin-left: 10px;
+    margin-right: 50px;
 }
 
 .entr_Esquerda{
