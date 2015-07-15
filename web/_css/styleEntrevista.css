@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    outline:none;
+    list-style:none;
+}
+body{
+    font: 14px Arial;
+}
+/*Arrendondar e colocar cor dos txt*/
+.bradiusColor{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #404040;
+    border:thin solid #DEDEDE;
+    height: 30px;
+}
+
+/*Partes da tela*/
+    .reponsavelPaf{
+        border: thin solid black;
+    }
+    .main{
+        border: thin solid blue;
+    }
+    .top{
+        width:290px;
+        margin: 0 auto;
+        border: thin solid yellow;
+    }  
+    .middle{
+        margin-top: 40px;
+        border: thin solid red;
+    }
+    .bottom{ 
+        text-align: center;
+        font: 20px arial;
+        margin-top: 40px;
+        border: thin solid aqua;
+    }
+    .direita{
+        border:thin solid chartreuse;
+    }
+    .esquerda{
+        margin-left: 20px;
+        border: thin solid darkviolet;
+        width: 650px;
+    }
+
+/*Todas as entradas estao centralizadas*/ 
+.txt{
+    width:150px;
+    text-align: center;
+    font: 20px  Arial;
+}
+.txtTop{
+    width:290px;
+    font: 20px  Arial;
+    text-align: center;
+}
+.boxPerfil{
+    margin-left: 20px;
+    width: 70px;
+    height: 30px;  
+}
+.boxPerfilw{
+    margin-left: 14px;
+    width: 70px;
+    height: 30px; 
+}
+
+/* div labels'*/
+.labelsE{
+}
+.labelsD{
+}
+.labelP{    
+    margin-right: 10px;
+}
+.labelPW{    
+    margin-left: 10px;
+}
+
+.entr_Esquerda{
+
+}
