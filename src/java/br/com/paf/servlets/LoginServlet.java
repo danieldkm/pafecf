@@ -5,13 +5,14 @@
  */
 package br.com.paf.servlets;
 
-import java.awt.BorderLayout;
+import br.com.paf.bean.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import paf.com.br.dao.UsuarioDAO;
+import paf.com.br.util.DAOFactory;
 
 /**
  *
@@ -30,8 +31,30 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-      
+        String login = request.getParameter("login");
+        String senha = request.getParameter("senha");
+        UsuarioDAO banco = DAOFactory.createUsuarioDAO();
+        /*Autenticamos o login e a senha recebido com a do banco*/
+        if (banco.validar(login, senha)) {
+            /*depois de verificarmos o login, vamos agora verificar o nivel do caboloco*/
+            if (banco.getTipo(login, senha) == 0)/*Se o tipo/nivel for zero entao Eh homologador*/ {
+                //Entao verificamos se ele ja tem homologacao para terminar
+                // Se o ele n tiver laudo pendente entao 'cria-se uma nova entrevista' redirecionando-o.
+                if (banco.getLaudo(login, senha) == null) {
+                    Usuario user = new Usuario(); //instancia um usuario
+                    //pega o nome do usuário no banco de dados e joga na bean Usuario.java  
+                    user.setNome(banco.getNome(login, senha));
+                    request.setAttribute("nomepaf", user.getNome());
+                    request.getRequestDispatcher("entrevista.jsp").forward(request, response);
+
+                } else/*Caso tenha algum laudo em ocorrencia*/ {
+                    // Entao primeiramente temos que preencher o bean de teste e depois chama-la.
+                    request.getRequestDispatcher("teste.jsp").forward(request, response);
+                }
+            } else /*Se o nivel for zero entao Eh manda para pagina de laudos e relatorios*/ {
+                request.getRequestDispatcher("tecnicoResponsavel.jsp").forward(request, response);
+            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -10,7 +10,8 @@ public interface UsuarioDAO {
     public List<Usuario> listar();
     public Usuario buscar(int id);
     public void editar(Usuario usuario);
-    public boolean validar(String nome, String senha);
-    public int getTipo(String nome, String senha);
-    public String getNome(String nome, String senha);
+    public boolean validar(String login, String senha);
+    public int getTipo(String login, String senha);
+    public String getNome(String login, String senha);
+    public String getLaudo(String login, String senha);
 }

@@ -8,24 +8,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <jsp:useBean id="usuarioB" scope="page" class="br.com.paf.bean.Usuario" />
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="_css/styleEntrevista.css">
         <title>JSP Page</title>
     </head>
     <body>
         <form name="coment"  method="post" action="testes">
-            <div><a id="sair" href="login.jsp">Sair</a></div>
+            <div><a id="sair" href="/login">Sair</a></div>
             <!--<div><a id="avancar" href="teste">Avançar &raquo;</a></div>-->
-            <input type="submit" value="avançar" name="Ava" id="avancar"  tabindex="35"/>
-
+            <input type="submit" value="avançar &raquo" name="Ava" id="avancar"  tabindex="35"/>
             <table >
                 <thead>
                     <tr>
                         <th></th>
-                        <th ><label>Homologação PAF-ECF - Responsável:</label><input type="text" class="caixa bradius responsavelPaf" id="centralizarTexto" name="responsavel" tabindex="1"/></th>
+                        <th ><label>Homologação PAF-ECF - Responsável:</label><input type="text" class="caixa bradius responsavelPaf" id="centralizarTexto" name="responsavelPaf" value="<%=request.getAttribute("nomepaf")%>" /></th>
                     </tr>
                     <tr class="top">
-                        <th><label>Responsável pelos testes:</label><input type="text" class="txt bradius" id="centralizarTexto" name="responsavel" tabindex="1"/></th>
+                        <th><label>Responsável pelos testes:</label><input type="text" class="txt bradius" autofocus="" id="centralizarTexto" name="responsavel" tabindex="1"/></th>
                         <th><label>Nome da Empresa:</label><input type="text" class="txt bradius" id="centralizarTexto" name="nomeEmpresa" tabindex="2" /></th>
                         <th><label>Versão do software:</label><input type="text" class="txt bradius" id="centralizarTexto" name="versao" tabindex="3" /></th>
                     </tr>

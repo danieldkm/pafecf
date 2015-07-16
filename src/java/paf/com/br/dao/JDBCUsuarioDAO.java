@@ -75,10 +75,10 @@ public class JDBCUsuarioDAO implements UsuarioDAO {
     }
 
     @Override
-    public boolean validar(String nome, String senha) {
+    public boolean validar(String login, String senha) {
         try {
 
-            String SQL = "SELECT * FROM usuario WHERE login='" + nome + "' AND senha='" + senha + "'";
+            String SQL = "SELECT * FROM usuario WHERE login='" + login + "' AND senha='" + senha + "'";
             PreparedStatement ps = connection.prepareStatement(SQL);
 
             ResultSet rs = ps.executeQuery();
@@ -92,9 +92,9 @@ public class JDBCUsuarioDAO implements UsuarioDAO {
     }
 
     @Override
-    public int getTipo(String nome, String senha) {
+    public int getTipo(String login, String senha) {
         try {
-            String SQL = "SELECT tipo FROM usuario WHERE login='" + nome + "' AND senha='" + senha + "'";
+            String SQL = "SELECT tipo FROM usuario WHERE login='" + login + "' AND senha='" + senha + "'";
             PreparedStatement ps = connection.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -120,6 +120,22 @@ public class JDBCUsuarioDAO implements UsuarioDAO {
         } catch (SQLException ex) {
             Logger.getLogger(JDBCUsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Erro SSQLException ao pegar o Tipo do usuario em JDBCUsuarioDAO", ex);
+        }
+        return null;
+    }
+
+    @Override
+    public String getLaudo(String login, String senha) {
+        try {
+            String SQL = "SELECT laudoAtual FROM usuario WHERE login='" + login + "' AND senha='" + senha + "'";
+            PreparedStatement ps = connection.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                return rs.getString("laudoAtual");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(JDBCUsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Erro SSQLException ao pegar o laduoAtual do usuario em JDBCUsuarioDAO", ex);
         }
         return null;
     }

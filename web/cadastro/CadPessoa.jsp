@@ -15,9 +15,9 @@
     <body>  
         <div class="formCadastro"> 
             <form action="cadastro" method="POST">
-                Nome:  <input  type="text" name="c_Nome" required="required" autofocus/>
-                Login: <input  type="text" name="c_Login" required="required" />
-                Senha: <input   type="text" name="c_Senha" required="required"/>
+                Nome:  <input  type="text" name="c_nome" required="required" autofocus/>
+                Login: <input  type="text" name="c_login" required="required" />
+                Senha: <input   type="text" name="c_senha" required="required"/>
                 Tipo:    
                 <select name="c_tipo" required="required">
                     <option></option>

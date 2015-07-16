@@ -5,12 +5,14 @@
  */
 package br.com.paf.servlets;
 
+import br.com.paf.bean.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import paf.com.br.dao.UsuarioDAO;
+import paf.com.br.util.DAOFactory;
 
 /**
  *
@@ -29,6 +31,27 @@ public class CadastroServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String nomeCad = request.getParameter("c_nome");
+        String loginCad = request.getParameter("c_login");
+        String senhaCad = request.getParameter("c_senha");
+        String tipoCad = request.getParameter("c_tipo");
+        Usuario user = new Usuario();
+        user.setNome(nomeCad);
+        user.setLogin(loginCad);
+        user.setSenha(senhaCad);
+        switch (tipoCad) {
+            case "Homologador(tester)":
+                user.setTipo(0);
+                break;
+            case "Tecnico Reposavel(Laudo)":
+                user.setTipo(1);
+                break;
+        }
+        user.setLaudoAtual(null);
+        UsuarioDAO userDao = DAOFactory.createUsuarioDAO();
+        userDao.inserir(user);
+        request.setAttribute("cadastro", "Cadastro realizado com sucesso!!");
+        request.getRequestDispatcher("/login").forward(request, response);
 
     }
 
