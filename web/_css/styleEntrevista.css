@@ -6,86 +6,41 @@
 }
 body{
     font: 14px Arial;
-}
-/*Arrendondar e colocar cor dos txt*/
-.bradiusColor{
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    color: #404040;
-    border:thin solid #DEDEDE;
-    height: 30px;
+}   
+a{
+    text-decoration:none;
 }
 
-/*Partes da tela*/
-.reponsavelPaf{
-    border: thin solid black;
-}
-.main{
-    border: thin solid blue;
+input#centralizarTexto{
+    text-align: center;
 }
 .top{
-    width:290px;
-    margin: 0 auto;
-    border: thin solid yellow;
-}  
-.middle{
-    margin-top: 40px;
-    border: thin solid red;
+
 }
-.bottom{ 
-    text-align: center;
-    font: 20px arial;
-    margin-top: 40px;
-    border: thin solid aqua;
+.caixa{
+    height:20px;
+    width: 500px;
 }
-.direita{
-    border:thin solid chartreuse;
-    margin-rightt: 20px;
-    width: 650px;
+.txt{
+    height:30px;
+    width:250px;
 }
-.esquerda{
+#avancar{
+    height:40px;
+    width:120px;
+    text-align:center;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.acom{
     margin-left: 20px;
-    border: thin solid darkviolet;
-    width: 650px;
+    margin-bottom: 40px;
+    padding-left: 90px;
 }
-
-/*Todas as entradas estao centralizadas*/ 
-.txtE{
+.txt2{
+    height:30px;
     width:150px;
-    text-align: center;
-    font: 20px  Arial;
-    margin-left: 500px;
-}
-.txtD{
-    width:150px;
-    text-align: center;
-    font: 20px  Arial;
-    margin-left: 500px;
-
-}
-.txtTop{
-    width:290px;
-    font: 20px  Arial;
-    text-align: center;
-}
-.boxPerfil{
-    margin-left: 20px;
-    width: 70px;
-    height: 30px;  
-    margin-top: 5px;       
-    margin-bottom: 10px;
-}
-/* div labels'*/
-.labelsE{
-    padding-top: 10px;
-}
-.labelsD{
-}
-.labelP{    
-    margin-right: 50px;
-}
-
-.entr_Esquerda{
-
+    margin-right: 30px;
+    margin-left: 10px; 
 }

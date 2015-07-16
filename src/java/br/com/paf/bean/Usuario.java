@@ -1,11 +1,12 @@
 package br.com.paf.bean;
 
-public class PessoaBean {
+public class Usuario {
     private int id;
     private String nome;
     private String login;
     private String senha;
     private int tipo;
+    private String laudoAtual;
 
     /**
      * @return the id
@@ -75,6 +76,20 @@ public class PessoaBean {
      */
     public void setTipo(int tipo) {
         this.tipo = tipo;
+    }
+
+    /**
+     * @return the laudoAtual
+     */
+    public String getLaudoAtual() {
+        return laudoAtual;
+    }
+
+    /**
+     * @param laudoAtual the laudoAtual to set
+     */
+    public void setLaudoAtual(String laudoAtual) {
+        this.laudoAtual = laudoAtual;
     }
     
 }
