@@ -55,6 +55,8 @@ public class Entrevista {
 
     private String nomePaf;
 
+    private String erPafEcf;
+
     public String getNomeEmpresa() {
         return nomeEmpresa;
     }
@@ -350,6 +352,20 @@ public class Entrevista {
      */
     public void setNomePaf(String nomePaf) {
         this.nomePaf = nomePaf;
+    }
+
+    /**
+     * @return the erPafEcf
+     */
+    public String getErPafEcf() {
+        return erPafEcf;
+    }
+
+    /**
+     * @param erPafEcf the erPafEcf to set
+     */
+    public void setErPafEcf(String erPafEcf) {
+        this.erPafEcf = erPafEcf;
     }
 
 }

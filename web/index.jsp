@@ -5,7 +5,7 @@
     Author     : npi
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=ISO-8859-1" language="java" pageEncoding="UTF-8" import="java.sql.*" %> 
 <!DOCTYPE html>
 <html>
     <head>

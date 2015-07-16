@@ -10,7 +10,7 @@ public class DAOFactory {
     public static UsuarioDAO createUsuarioDAO() {
         return new JDBCUsuarioDAO();
     }
-    public static EntrevistaDAO createEmpresaDAO() {
+    public static EntrevistaDAO createEntrevistaDAO() {
         return new JDBCEntrevistaDAO();
     }
 }

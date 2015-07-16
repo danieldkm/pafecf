@@ -46,42 +46,45 @@ public class JDBCEntrevistaDAO implements EntrevistaDAO {
     public void salvar(Entrevista empresa) {
         try {
 
-            String SQL = "INSERT INTO entrevista (nomeEmpresa, responsavel, versao, laudo, davSemImpressao, davEmNaoFiscal,davImpressoEmECF,preVenda,faltaEnergia,postoComBombas,davOS,OficinaComContaCliente,resComContaCliente,ecfResComBalanca,ecfResSemBalanca,ecfComumComBalanca,ecfComumSemBalanca,farmacia,retaguardaComPaf,retaguardaSemPaf,semRetaguarda,transporte,postoDePedagio,moteis,cinemas,perfilW,perfilV,perfilY,PerfilZ,SimplesNacional,DeclaracaoDeConformidade,copiaDoContrato) Values"
-                    + "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            String SQL = "INSERT INTO entrevista (nomeEmpresa, responsavel, versao, data,laudo, davSemImpressao, davEmNaoFiscal,davImpressoEmECF,preVenda,faltaEnergia,postoComBombas,davOS,OficinaComContaCliente,resComContaCliente,ecfResComBalanca,ecfResSemBalanca,ecfComumComBalanca,ecfComumSemBalanca,farmacia,retaguardaComPaf,retaguardaSemPaf,semRetaguarda,transporte,postoDePedagio,moteis,cinemas,perfilW,perfilV,perfilY,PerfilZ,SimplesNacional,DeclaracaoDeConformidade,copiaDoContrato,erPafEcf,nomePaf) Values"
+                    + "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(SQL);
             ps.setString(1, empresa.getNomeEmpresa());
             ps.setString(2, empresa.getResponsavel());
             ps.setString(3, empresa.getVersao());
-            ps.setString(4, empresa.getLaudo());
-            ps.setString(5, empresa.getDavSemImpressao());
-            ps.setString(6, empresa.getDavEmNaoFiscal());
-            ps.setString(7, empresa.getDavImpressoEmECF());
-            ps.setString(8, empresa.getPreVenda());
-            ps.setString(9, empresa.getFaltaEnergia());
-            ps.setString(10, empresa.getPostoComBombas());
-            ps.setString(11, empresa.getDavOS());
-            ps.setString(12, empresa.getOficinaComContaCliente());
-            ps.setString(13, empresa.getResComContaCliente());
-            ps.setString(14, empresa.getEcfResComBalanca());
-            ps.setString(15, empresa.getEcfResSemBalanca());
-            ps.setString(16, empresa.getEcfComumComBalanca());
-            ps.setString(17, empresa.getEcfComumSemBalanca());
-            ps.setString(18, empresa.getFarmacia());
-            ps.setString(19, empresa.getRetaguardaComPaf());
-            ps.setString(20, empresa.getRetaguardaSemPaf());
-            ps.setString(21, empresa.getSemRetaguarda());
-            ps.setString(22, empresa.getTransporte());
-            ps.setString(23, empresa.getPostoDePedagio());
-            ps.setString(24, empresa.getMoteis());
-            ps.setString(25, empresa.getCinemas());
-            ps.setString(26, empresa.getPerfilW());
-            ps.setString(27, empresa.getPerfilV());
-            ps.setString(28, empresa.getPerfilY());
-            ps.setString(29, empresa.getPerfilZ());
-            ps.setString(30, empresa.getSimplesNacional());
-            ps.setString(31, empresa.getDeclaracaoDeConformidade());
-            ps.setString(32, empresa.getCopiaDoContrato());
-            ps.setString(33,empresa.getNomePaf());
+            ps.setString(4, empresa.getData());
+            ps.setString(5, empresa.getLaudo());
+            ps.setString(6, empresa.getDavSemImpressao());
+            ps.setString(7, empresa.getDavEmNaoFiscal());
+            ps.setString(8, empresa.getDavImpressoEmECF());
+            ps.setString(9, empresa.getPreVenda());
+            ps.setString(10, empresa.getFaltaEnergia());
+            ps.setString(11, empresa.getPostoComBombas());
+            ps.setString(12, empresa.getDavOS());
+            ps.setString(13, empresa.getOficinaComContaCliente());
+            ps.setString(14, empresa.getResComContaCliente());
+            ps.setString(15, empresa.getEcfResComBalanca());
+            ps.setString(16, empresa.getEcfResSemBalanca());
+            ps.setString(17, empresa.getEcfComumComBalanca());
+            ps.setString(18, empresa.getEcfComumSemBalanca());
+            ps.setString(19, empresa.getFarmacia());
+            ps.setString(20, empresa.getRetaguardaComPaf());
+            ps.setString(21, empresa.getRetaguardaSemPaf());
+            ps.setString(22, empresa.getSemRetaguarda());
+            ps.setString(23, empresa.getTransporte());
+            ps.setString(24, empresa.getPostoDePedagio());
+            ps.setString(25, empresa.getMoteis());
+            ps.setString(26, empresa.getCinemas());
+            ps.setString(27, empresa.getPerfilW());
+            ps.setString(28, empresa.getPerfilV());
+            ps.setString(29, empresa.getPerfilY());
+            ps.setString(30, empresa.getPerfilZ());
+            ps.setString(31, empresa.getSimplesNacional());
+            ps.setString(32, empresa.getDeclaracaoDeConformidade());
+            ps.setString(33, empresa.getCopiaDoContrato());
+            ps.setString(34, empresa.getErPafEcf());
+            ps.setString(35, empresa.getNomePaf());
+
             ps.executeUpdate();
 
             ps.close();

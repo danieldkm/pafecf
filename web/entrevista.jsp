@@ -4,18 +4,16 @@
     Author     : npi
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" import="java.sql.*"  %>  
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <jsp:useBean id="usuarioB" scope="page" class="br.com.paf.bean.Usuario" />
-        
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
         <link rel="stylesheet" href="_css/styleEntrevista.css">
-        <title>JSP Page</title>
+        <title>Entrevista</title>
     </head>
     <body>
-        <form name="coment"  method="post" action="testes">
+        <form name="coment"  method="post" action="Entrevista" accept-charset="utf-8">
             <div><a id="sair" href="/login">Sair</a></div>
             <!--<div><a id="avancar" href="teste">Avançar &raquo;</a></div>-->
             <input type="submit" value="avançar &raquo" name="Ava" id="avancar"  tabindex="35"/>
