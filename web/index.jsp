@@ -20,6 +20,7 @@
                 <form action="Service" method="POST">
                     <input id="login" type="text" name="login" placeholder="Login" value="${userBean.login}" class="txt bradius" autofocus  />
                     <br/>
+                    
                     <input id="senha" type="password" name="senha" placeholder="Senha" value="${userBean.senha}" class=" txt bradius" />
                     <input type="submit" class="botao bradius" value="Entrar" />
                 </form>
