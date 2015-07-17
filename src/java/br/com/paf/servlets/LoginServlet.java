@@ -11,8 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import paf.com.br.dao.UsuarioDAO;
-import paf.com.br.util.DAOFactory;
+import br.com.paf.dao.UsuarioDAO;
+import br.com.paf.util.DAOFactory;
 
 /**
  *

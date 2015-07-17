@@ -13,8 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import paf.com.br.dao.EntrevistaDAO;
-import paf.com.br.util.DAOFactory;
+import br.com.paf.dao.EntrevistaDAO;
+import br.com.paf.util.DAOFactory;
 
 /**
  *

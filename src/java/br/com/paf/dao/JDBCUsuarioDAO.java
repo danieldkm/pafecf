@@ -1,4 +1,4 @@
-package paf.com.br.dao;
+package br.com.paf.dao;
 
 import br.com.paf.bean.Usuario;
 import java.sql.Connection;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import paf.com.br.util.ConnectionFactory;
+import br.com.paf.util.ConnectionFactory;
 
 public class JDBCUsuarioDAO implements UsuarioDAO {
 

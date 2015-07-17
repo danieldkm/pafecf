@@ -1,4 +1,4 @@
-package paf.com.br.dao;
+package br.com.paf.dao;
 
 import br.com.paf.bean.Entrevista;
 import java.sql.Connection;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import paf.com.br.util.ConnectionFactory;
+import br.com.paf.util.ConnectionFactory;
 
 public class JDBCEntrevistaDAO implements EntrevistaDAO {
 

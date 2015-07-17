@@ -1,4 +1,4 @@
-package paf.com.br.util;
+package br.com.paf.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

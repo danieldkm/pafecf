@@ -1,4 +1,4 @@
-package paf.com.br.dao;
+package br.com.paf.dao;
 
 import br.com.paf.bean.Usuario;
 import java.util.List;

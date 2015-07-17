@@ -1,9 +1,9 @@
-package paf.com.br.util;
+package br.com.paf.util;
 
-import paf.com.br.dao.EntrevistaDAO;
-import paf.com.br.dao.JDBCEntrevistaDAO;
-import paf.com.br.dao.JDBCUsuarioDAO;
-import paf.com.br.dao.UsuarioDAO;
+import br.com.paf.dao.EntrevistaDAO;
+import br.com.paf.dao.JDBCEntrevistaDAO;
+import br.com.paf.dao.JDBCUsuarioDAO;
+import br.com.paf.dao.UsuarioDAO;
 
 public class DAOFactory {
 
